@@ -38,7 +38,8 @@ pip install -r requirements.txt
 
 **✔Unittests:**
 > SQL Shell (psql) - консоль PostgreSQL
+> > -Подключаемся к БД которая указана в settings.py и в конcоли выдаем права пользователю: 
+> > > ``` ALTER USER books_user CREATEDB; ```
    + Пользователем создается специальная БД для тестов. Обычно она после каждого тестирования - удаляется.
    + Регрессионное тестирование.
    + python .\manage.py test store.tests
-   + 
