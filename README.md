@@ -34,7 +34,7 @@ pip install -r requirements.txt
         fields = '__all__'
    ```
       * Превращает поля в ключи словаря:
-      * [{"id":1,"name":"Number one","price":"1254.04"},{"id":2,"name":"Alladin","price":"123.32"}]
+      > * [{"id":1,"name":"Number one","price":"1254.04"},{"id":2,"name":"Alladin","price":"123.32"}]
 
 **✔Unittests:**
 > SQL Shell (psql) - консоль PostgreSQL
@@ -43,3 +43,6 @@ pip install -r requirements.txt
    + Пользователем создается специальная БД для тестов. Обычно она после каждого тестирования - удаляется.
    + Регрессионное тестирование.
    + python .\manage.py test store.tests
+   - **Coverage.** Проверка покрытия кода тестами.
+      > ``` coverage run --source='.' ./manage.py test . ```
+      > > coverage report
