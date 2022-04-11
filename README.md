@@ -6,10 +6,9 @@ pip install -r requirements.txt
 - **psycopg2==2.9.3**
 
 
-**✔Config:**
-  > settings.py: 
-    > > PostgreSQL:
-    > > > https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04
+**✔Config:** 
+   + PostgreSQL:
+     * https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04
    ``` 
     DATABASES = {
       'default': {
