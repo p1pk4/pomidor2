@@ -23,3 +23,16 @@ pip install -r requirements.txt
           'PORT': '',
       }
     } 
+```
+
+**✔Serialize:**
+   + в serializers.py есть модель BooksSerializer которая наследуется от класса Serializer из rest_framework.
+   ```
+   class BooksSerializer(ModelSerializer):
+    class Meta:
+        model = Book
+        fields = '__all__'
+   ```
+      * Превращает поля в ключи словаря:
+      * [{"id":1,"name":"Number one","price":"1254.04"},{"id":2,"name":"Alladin","price":"123.32"}]
+
