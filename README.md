@@ -36,3 +36,9 @@ pip install -r requirements.txt
       * Превращает поля в ключи словаря:
       * [{"id":1,"name":"Number one","price":"1254.04"},{"id":2,"name":"Alladin","price":"123.32"}]
 
+**✔Unittests:**
+> SQL Shell (psql) - консоль PostgreSQL
+   + Пользователем создается специальная БД для тестов. Обычно она после каждого тестирования - удаляется.
+   + Регрессионное тестирование.
+   + python .\manage.py test store.tests
+   + 
