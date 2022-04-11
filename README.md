@@ -4,6 +4,8 @@ pip install -r requirements.txt
 
 - **Django==4.0.4**
 - **psycopg2==2.9.3**
+- **djangorestframework==3.13.1**
+
 
 
 **✔Config:** 
