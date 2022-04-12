@@ -6,7 +6,7 @@ pip install -r requirements.txt
 - **psycopg2==2.9.3**
 - **djangorestframework==3.13.1**
 - **coverage==6.3.2**
-
+- **django-filter==21.1**
 
 
 **✔Config:** 
@@ -48,3 +48,6 @@ pip install -r requirements.txt
       > ``` coverage run --source='.' ./manage.py test . ```
       > > coverage report
       > > > coverage html - Визуальное отображение покрытия кода тестами (в корне проекта создается папка "htmlcov")
+
+**✔Filters:**
+ * https://www.django-rest-framework.org/api-guide/filtering/
