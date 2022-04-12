@@ -82,3 +82,5 @@ pip install -r requirements.txt
          - filter_fields = ['price']
       + Если ищем по двум полям тогда используем поиск(Например ищем значение 500 в поле "цена" и в поле "скидка":
          - search_fields = ['name', 'author_name']
+      + Если нужна сортировка:
+         - ordering_fields = ['price', 'author_name']
