@@ -66,3 +66,14 @@ pip install -r requirements.txt
       filter_backends = [DjangoFilterBackend]
       filter_fields = ['price']
    ```
+   **В settings.py утсанавливаем дефолтный формат выдачи данных у Django Rest Framework:**
+   ```
+   REST_FRAMEWORK = {
+      'DEFAULT_RENDERER_CLASSES': (
+         'rest_framework.renderers.JSONRenderer',
+      ),
+      'DEFAULT_PARSER_CLASSES': (
+         'rest_framework.parsers.JSONParser',
+      )
+   }
+```
