@@ -7,6 +7,7 @@ pip install -r requirements.txt
 - **djangorestframework==3.13.1**
 - **coverage==6.3.2**
 - **django-filter==21.1**
+- **social-auth-app-django==5.0.0**
 
 
 **✔Config:** 
