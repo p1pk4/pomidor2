@@ -88,9 +88,9 @@ pip install -r requirements.txt
          - ordering_fields = ['price', 'author_name']
 
 **✔Oauth:**
-   * https://python-social-auth.readthedocs.io/en/latest/configuration/django.html
    * Как устроен oauth - https://www.digitalocean.com/community/tutorials/oauth-2-ru
-   +  добавил в settings.py настройки авторизации через социальные сети(в данном случае через Гитхаб)
-   +  добавил функцию во view для отдачи html страницы
-   +  добавил url для view в urls.py
-   - Авторизованный пользователь отображается в админке Django 
+   * https://python-social-auth.readthedocs.io/en/latest/configuration/django.html   
+      +  добавил в settings.py настройки авторизации через социальные сети(в данном случае через Гитхаб)
+      +  добавил функцию во view для отдачи html страницы
+      +  добавил url для view в urls.py
+         - Авторизованный пользователь отображается в админке Django 
