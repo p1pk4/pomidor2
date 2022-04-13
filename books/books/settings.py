@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'social_django',
+
     'store',
 ]
 
@@ -56,7 +58,7 @@ ROOT_URLCONF = 'books.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -86,6 +88,18 @@ DATABASES = {
     }
 }
 
+AUTHENTICATION_BACKENDS = (
+    # 'social_core.backends.open_id.OpenIdAuth',
+    # 'social_core.backends.google.GoogleOpenId',
+    # 'social_core.backends.google.GoogleOAuth2',
+    # 'social_core.backends.google.GoogleOAuth',
+    # 'social_core.backends.twitter.TwitterOAuth',
+    # 'social_core.backends.yahoo.YahooOpenId',
+
+    'social_core.backends.github.GithubOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -136,3 +150,10 @@ REST_FRAMEWORK = {
         'rest_framework.parsers.JSONParser',
     )
 }
+
+# Разрешаем пакету пользоваться json филдом в PostgreSQL
+SOCIAL_AUTH_JSONFIELD_ENABLED = True
+
+# Ключи Гитхаба чтобы мы могли пользоваться его auth
+SOCIAL_AUTH_GITHUB_KEY = '2888dd45b3fa2b8bf860'
+SOCIAL_AUTH_GITHUB_SECRET = 'c99828590d512961779a15ca182b546e0949d3c2'

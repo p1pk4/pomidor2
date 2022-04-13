@@ -13,7 +13,7 @@ class BooksApiTestCase(APITestCase):
         self.book_3 = Book.objects.create(name='Test book Author 1', price=55, author_name='Author 2')
 
     def test_get(self):
-        """Тест на все книги без фильтров """
+        """Тест на обращение к книгам """
         url = reverse('book-list')
         response = self.client.get(url)
         serializer_data = BooksSerializer([self.book_1, self.book_2, self.book_3], many=True).data
