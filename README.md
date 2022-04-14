@@ -94,3 +94,10 @@ pip install -r requirements.txt
       +  добавил функцию во view для отдачи html страницы
       +  добавил url для view в urls.py
          - Авторизованный пользователь отображается в админке Django 
+         - 
+ **✔Update:**
+   + Add view for blog.html.  
+   + Add path('blog/', blog) in urls.py
+   + Add blog.html with GitHub authorization button
+
+
