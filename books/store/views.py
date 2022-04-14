@@ -20,3 +20,7 @@ class BookViewSet(ModelViewSet):
 
 def auth(request):
     return render(request, 'oauth.html')
+
+
+def blog(request):
+    return render(request, 'blog.html')
