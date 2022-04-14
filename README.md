@@ -98,6 +98,6 @@ pip install -r requirements.txt
  **✔Update:**
    + Add view for blog.html.  
    + Add path('blog/', blog) in urls.py
-   + Add blog.html with GitHub authorization button
+   + Add blog.html with GitHub authorization button with css
 
 
