@@ -9,6 +9,9 @@ pip install -r requirements.txt
 - **django-filter==21.1**
 - **social-auth-app-django==5.0.0**
 
+**Add script for checks update dependencies in reqirements.txt:**
+   > **python upgrade_pip.py**
+
 
 **✔Config:** 
    + PostgreSQL:
