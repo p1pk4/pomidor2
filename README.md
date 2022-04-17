@@ -14,7 +14,7 @@ pip install -r requirements.txt
 >
 **✔view:**
 API endpoint для формирования данных на сервер, передача их клиенту и отрисовка этих данных на клиенте.
-> queryset = AllUsers.objects.all() # Cписок/срез объектов которые выводятся в запросе. В данном случае из Book модели.
+> queryset = AllUsers.objects.all() # Cписок/срез объектов которые выводятся в запросе. В данном случае из AllUsers модели.
 > serializer_class = AllUsersSerializer # Из каких полей сформируется питон словарь, а потом уже json объект.
 1. models.py (создаются миграции)
 2. serializers.py (передаются поля для формирования питон словаря)
