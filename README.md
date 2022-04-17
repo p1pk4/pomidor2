@@ -11,8 +11,18 @@ pip install -r requirements.txt
 
 **Add script for checks update dependencies in reqirements.txt:**
    > **python upgrade_pip.py**
-
-
+>
+**✔view:**
+API endpoint для формирования данных на сервер, передача их клиенту и отрисовка этих данных на клиенте.
+> queryset = AllUsers.objects.all() # Cписок/срез объектов которые выводятся в запросе. В данном случае из Book модели.
+> serializer_class = AllUsersSerializer # Из каких полей сформируется питон словарь, а потом уже json объект.
+1. models.py (создаются миграции)
+2. serializers.py (передаются поля для формирования питон словаря)
+3. views.py (создаются ViewSets для каждой модели. Фильтры, сортировки, права доступа)
+4. urls.py:
+	- **для сервера** - во view.py пишется метод с render и именем html файла. - backend
+	- **для клиента** - регистриуется router и указывается viewset. ```router.register('api/all_users', AllUsersViewSet)``` - frontend
+	
 **✔Config:** 
    + PostgreSQL:
      * https://coderlessons.com/tutorials/bazy-dannykh/uchebnik-postgresql/7-sozdat-izmenit-dobavit-udalit-polzovatelia
