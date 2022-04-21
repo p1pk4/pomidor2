@@ -30,6 +30,10 @@ class AllUsersViewSet(ModelViewSet):
     search_fields = ['first_name', 'last_name']
 
 
+def all_users(request):
+    return render(request, 'all_users.html', {'users': AllUsers.objects.all()})
+
+
 def auth(request):
     return render(request, 'oauth.html')
 
