@@ -113,4 +113,8 @@ API endpoint для формирования данных на сервер, п�
    + Add path('blog/', blog) in urls.py
    + Add blog.html with GitHub authorization button with css
 
-
+ **✔Update:**
+   + Add ManyToMany model UserBookRelation 
+   + Add serializer UserBookRelationSerializer with fields: like, in_bookmarks, rate
+   + Add view UserBookRelationView **with lookup_field = 'book'**
+   + Add url router.register(r'book_relation', UserBookRelationView)
