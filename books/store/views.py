@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
-from rest_framework.viewsets import ModelViewSet
+from rest_framework.mixins import UpdateModelMixin
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.viewsets import ModelViewSet, GenericViewSet
 
-from store.models import Book, AllUsers
+from store.models import Book, AllUsers, UserBookRelation
 from store.permissions import IsOwnerOrStaffOrReadOnly
-from store.serializers import BooksSerializer, AllUsersSerializer
+from store.serializers import BooksSerializer, AllUsersSerializer, UserBookRelationSerializer
 
 
 class BookViewSet(ModelViewSet):
@@ -32,6 +34,15 @@ class AllUsersViewSet(ModelViewSet):
 
 def all_users(request):
     return render(request, 'all_users.html', {'users': AllUsers.objects.all()})
+
+
+class UserBookRelationView(UpdateModelMixin, GenericViewSet):
+    permission_classes = [IsAuthenticated]
+    queryset = UserBookRelation.objects.all()
+    serializer_class = UserBookRelationSerializer
+
+    # Скрытие id reletion для клиента. При связи user - book каждому полю присваивается id, id relation не нужен.
+    lookup_field = 'book'
 
 
 def auth(request):
